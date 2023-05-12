@@ -1,0 +1,280 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: chitchat/what_capstone
+  examples: |
+    - what is graduate capstone?
+    - Why capstone?
+    - Is capstone mandatory?
+    - What is capstone?
+    - What are the varieties of capstone experience?
+    - What are the capstone options for MS Computer Science students?
+    - Can you tell me about the capstone experiences for CSUEB's MS Computer Science program?
+
+- intent: chitchat/capstone_exam_description
+  examples: |
+    - what is graduate capstone exam?
+    - capstone exam
+    - what is CS692
+    - How many exams will we have in capstone?
+    - What will be the capstone exams on?
+    - What does the capstone exam consist of?
+    - Can you tell me more about the capstone exam?
+
+- intent: chitchat/capstone_exam_question_papers
+  examples: |
+    - Where can I find the previous exam question papers for the capstone exam?
+    - Is there a source for past exam question papers for the capstone exam?
+    - Can you provide information on how to access previous exam question papers for the capstone exam?
+
+- intent: chitchat/capstone_exam_rules
+  examples: |
+    - What are the rules or instructions for writing the capstone exam?
+    - Can you provide information on the guidelines for taking the capstone exam?
+    - What should I know about the rules and regulations for the capstone exam?
+
+- intent: chitchat/capstone_exam_units
+  examples: |
+    - How many units is the capstone exam?
+    - What is the credit value for the capstone exam?
+    - How many units do I earn for completing the capstone exam?
+    - Units for Capstone Exam
+
+- intent: chitchat/capstone_exam_prerequisites
+  examples: |
+    - What are the prerequisites for CS 692 Capstone Exam?
+    - What are the qualifications for CS 692?
+    - What qualifications are required for CSUEB's capstone exam (CS 692)?
+    - Can you tell me the requirements for enrolling in CS 692 Capstone Exam?
+
+- intent: chitchat/capstone_exam_outcomes
+  examples: |
+    - What are the expected outcomes of CS 692 Capstone Exam?
+    - What can students expect to gain from completing CSUEB's capstone exam (CS 692)?
+    - expected outcomes of capstone exam
+    - What skills or knowledge will students acquire after successfully completing CS 692 Capstone Exam?
+
+- intent: chitchat/capstone_exam_failure
+  examples: |
+    - What happens if a student fails one or more exams in CS 692 Capstone Exam?
+    - What are the consequences of not passing one or more exams in the capstone exam (CS 692)?
+    - Can students retake failed exams in CSUEB's capstone exam?
+    - Failed in one capstone exam
+    - What happens if I do not pass all three exams in the capstone exam?
+
+- intent: chitchat/capstone_exam_enroll
+  examples: |
+    - How can I enroll in CS 692 Capstone Exams?
+    - How do I register for CS 692 Capstone Exams?
+    - apply for capstone exam
+
+- intent: chitchat/capstone_exam_grading
+  examples: |
+    - How is the capstone exam graded?
+    - CS 692 grading
+    - What is the passing criteria for the capstone exam?
+    - Can I see the grading of my capstone exam?
+
+
+- intent: chitchat/capstone_exam_plagiarism
+  examples: |
+    - What happens if I am caught plagiarizing in the capstone exam?
+    - What are the consequences of plagiarism in the capstone exam?
+    - Is plagiarism allowed in the capstone exam?
+    - Plagiarism in capstone exam
+
+- intent: chitchat/capstone_csu_5_year_rule
+  examples: |
+    - Explain the CSU 5-year rule.
+    - What is the CSU 5-year rule.
+    - Describe the CSU 5-year rule.
+
+- intent: chitchat/capstone_thesis
+  examples: |
+    - What is a capstone thesis?
+    - Define capstone thesis
+    - Can you provide more information about CS699?
+    - What are the steps to complete a thesis?
+    - How is a thesis completed?
+
+- intent: chitchat/capstone_thesis_project_prerequisites
+  examples: |
+    - What are the prerequisites for a capstone thesis?
+    - Tell me about the requirements for a capstone project.
+    - Tell me about the requirements for a capstone thesis.
+    - What qualifications are needed for a capstone project or thesis?
+
+- intent: chitchat/capstone_thesis_project_plagiarism
+  examples: |
+    - What are the consequences of plagiarism in a capstone thesis?
+    - What are the consequences of plagiarism in a capstone project?
+    - What happens if my capstone proposal is found to be plagiarized?
+    - Tell me about the repercussions of plagiarism in a capstone project.
+    - consequences of plagiarism in capstone thesis or capstone project
+
+- intent: chitchat/capstone_thesis_report_format
+  examples: |
+    - What is the format of a thesis report?
+    - Thesis final report format
+    - How should I structure my thesis report?
+    - Where can I find the guidelines for thesis format?
+
+- intent: chitchat/capstone_thesis_project_proposal_format
+  examples: |
+    - What should be included in a thesis/project proposal?
+    - Can you recommend the format for a proposal?
+    - Where can I find templates for thesis/project proposals?
+    - university format for capstone proposal
+
+- intent: chitchat/capstone_thesis_project_grading_units
+  examples: |
+    - How is the capstone thesis/project graded?
+    - What is the grading system for capstone thesis/project?
+    - Can you tell me about the grading for capstone thesis/project?
+    - How many units do I need to take for capstone thesis/project?
+    - What are the units required for capstone thesis/project?
+    - Can you provide information about the units for capstone thesis/project?
+
+- intent: chitchat/capstone_thesis_enrollment
+  examples: |
+    - How do I enroll for capstone thesis?
+    - What is the process for enrolling in capstone thesis?
+    - Can you tell me about the enrollment process for capstone thesis?
+    - Do I need a special registration petition for enrolling in capstone thesis?
+    - enrolling into capstone thesis
+
+- intent: chitchat/capstone_thesis_project_SRP
+  examples: |
+    - What is a Special Registration Petition (SRP)?
+    - How do I use SRP for enrollment?
+    - Can you tell me about SRP and how to use it?
+    - What is the deadline for submitting SRP for Spring semester?
+    - When do I need to submit SRP for Spring semester?
+    - Can you provide information about the SRP deadline for Spring semester?
+
+- intent: chitchat/capstone_thesis_next_steps
+  examples: |
+    - What are the next steps after enrolling in a thesis?
+    - What should I do after enrolling in my thesis?
+    - Can you tell me about the next steps after enrolling in a thesis?
+
+- intent: chitchat/capstone_thesis_project_rules
+  examples: |
+    - Can you tell me about the regulations for a thesis proposal?
+    - Can you tell me about the regulations for a thesis?
+    - What should I know about thesis rules?
+    - What are the rules for capstone projects?
+    - What are the regulations for capstone projects?
+    - Can you tell me about the rules for capstone projects?
+    - What are the guidelines for capstone projects?
+
+- intent: chitchat/capstone_thesis_committee
+  examples: |
+    - How many faculty members will review my thesis?
+    - Who will be reviewing my thesis?
+    - Tell me about the thesis committee.
+    - Tell me about the members of the thesis committee.
+
+- intent: chitchat/capstone_project
+  examples: |
+    - capstone project
+    - What is CS693
+    - Tell me about capstone projects.
+    - How are capstone projects different from other projects?
+    - What is a capstone project?
+
+
+- intent: chitchat/capstone_project_group
+  examples: |
+    - Can students work in groups for capstone projects?
+    - What is the recommended group size for capstone projects?
+    - How many students can work together on a capstone project?
+    - group size for project
+
+- intent: chitchat/capstone_project_enroll
+  examples: |
+    - How do I enroll in a capstone project?
+    - What is the process for enrolling in a capstone project?
+    - Can you tell me about the enrollment for capstone projects?
+    - How to enroll into CS693?
+
+- intent: chitchat/deeplearning_lab
+  examples: |
+    - What is the Deep Learning Lab?
+    - Can you tell me about the Deep Learning Lab?
+    - Who is the head of dl lab?
+
+- intent: chitchat/deeplearning_lab_members
+  examples: |
+    - Who are the members of the Deep Learning Lab?
+    - Can you tell me about the researchers in the Deep Learning Lab?
+    - Tell me about the team members of the Deep Learning Lab?
+    - people in lab
+
+- intent: chitchat/deeplearning_lab_projects
+  examples: |
+    - Can you provide information about the projects of the Deep Learning Lab?
+    - What are the projects the Deep Learning Lab has worked on?
+    - Tell me about the research projects of the Deep Learning Lab.
+    - Tell me more about the research at the Deep Learning Lab?
+
+- intent: chitchat/deeplearning_lab_sdinc19
+  examples: |
+    - Tell me about stance detection in COVID-19 tweets.
+    - Explain the research on stance detection in COVID-19 tweets.
+    - Can you provide information about the Deep Learning Lab's work on COVID-19 tweet stance detection?
+
+- intent: chitchat/deeplearning_lab_chatbot
+  examples: |
+    - Tell me about the chatbot developed for CSUEB.
+    - Explain the purpose of the CSUEB chatbot.
+    - Can you provide information about the chatbot for CSUEB?
+
+- intent: chitchat/deeplearning_lab_website
+  examples: |
+    - Can you provide the website of the Deep Learning Lab?
+    - Is there a website for the DL Lab at CSUEB?
+    - Where can I find more information about the DL Lab?
+    - link for dl lab 
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?

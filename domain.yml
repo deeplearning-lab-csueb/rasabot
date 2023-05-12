@@ -1,0 +1,217 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - out_of_scope
+  #- chitchat/what_capstone
+  #- chitchat/capstone_exam_description
+  #- chitchat/capstone_exam_question_papers
+  #- chitchat/capstone_exam_rules
+  #- chitchat/capstone_exam_units
+  #- chitchat/capstone_exam_prerequisites
+  #- chitchat/capstone_exam_outcomes
+  #- chitchat/capstone_exam_failure
+  #- chitchat/capstone_exam_enroll
+  #- chitchat/capstone_exam_grading
+  #- chitchat/capstone_exam_plagiarism
+  #- chitchat/capstone_csu_5_year_rule
+  #- chitchat/capstone_thesis
+  #- chitchat/capstone_thesis_project_prerequisites
+  #- chitchat/capstone_thesis_project_plagiarism
+  #- chitchat/capstone_thesis_report_format
+  #- chitchat/capstone_thesis_project_proposal_format
+  #- chitchat/capstone_thesis_project_grading_units
+  #- chitchat/capstone_thesis_enrollment
+  #- chitchat/capstone_thesis_project_SRP
+  #- chitchat/capstone_thesis_next_steps
+  #- chitchat/capstone_thesis_project_rules
+  #- chitchat/capstone_thesis_committee
+  #- chitchat/capstone_project
+  #- chitchat/capstone_project_group
+  #- chitchat/capstone_project_enroll
+  #- chitchat/deeplearning_lab
+  #- chitchat/deeplearning_lab_members
+  #- chitchat/deeplearning_lab_projects
+  #- chitchat/deeplearning_lab_sdinc19
+  #- chitchat/deeplearning_lab_chatbot
+  #- chitchat/deeplearning_lab_website
+  - chitchat
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you? I am a bot for CSU East Bay Deep Learning Lab and you can call me EBA. How can I help you?"
+    #buttons:
+      #- title: "Deep Learning Lab"
+        #payload: "/chitchat"
+      #- title: "Graduate Capstone"
+        #payload: "/chitchat"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot for CSU East Bay Deep Learning Lab and you can call me EBA"
+
+  utter_chitchat/what_capstone:
+  - text: "The capstone is a requirement for MS Computer Science students at CSUEB. There are three options for capstone experiences: CS 692 Capstone Examination, CS 693 Capstone Project, and CS 699 Capstone Thesis. Each option is a minimum of 3 units and students can choose one of these options to complete their study at CSUEB. What do you want to know about?"
+    buttons:
+      - title: "Capstone Examination"
+        payload: "/capstone_exam_description"
+      - title: "Capstone Project"
+        payload: "/capstone_project"
+      - title: "Capstone Thesis"
+        payload: "/capstone_thesis"
+
+  utter_chitchat/capstone_exam_description:
+  - text: "The capstone exam for MS Computer Science students consists of three exams: Operating Systems, Advanced Algorithms, and Theory of Computation. These exams map to three of the five required courses for the master's degree. The course will be guided by three faculty members who will be available to answer questions in each of the three areas to help students prepare for the exams. Attendance or participation in study sessions or office hours is recommended but not mandatory."
+
+  utter_chitchat/capstone_exam_question_papers:
+  - text: "You can find the previous exam question papers for the capstone exam at this link: https://www.csueastbay.edu/cs/graduate-capstone/cs-6901-cap-exp/past-exams/examples.html"
+
+  utter_chitchat/capstone_exam_rules:
+    - text: |
+        The rules and instructions for the capstone exam are as follows:
+        - Exams are held in person and are closed notes, books, and any other outside resources.
+        - Each exam is 1.5 hours long and attendance is mandatory for each of the three exams.
+        - An exam sheet with 3 questions and paper will be provided.
+        - Students must answer only two out of the three questions. Please note that an individual question may have multiple sub parts.
+        - All programming questions and answers should be written in the C or C++ languages.
+        - Students should write on one side of their answer paper only. Do not write on the exam question sheet itself.
+        - Name and which questions were chosen to complete should be marked on the cover sheet of the exam.
+        - At the end of the exam, students will tear off the cover sheet and staple it to their answer sheets.
+
+  utter_chitchat/capstone_exam_units:
+    - text: "CS 692 Capstone Exams is a three (3) unit class. Grading is CR/NC. Students need to pass all three exams to earn a credit for the class."
+
+  utter_chitchat/capstone_exam_prerequisites:
+    - text: "To enroll in CS 692 Capstone Exams, students must meet the following prerequisites and qualifications: Department consent, minimum 3.0 GPA, and advancement to candidacy. Students must have completed all prerequisite and/or deficiency courses with a grade of B- or better. They should also have completed the five required courses for the degree (CS 601, CS 611, CS 621, CS 651, and CS 671) and have a cumulative GPA of 3.0. Note that students cannot take a required course, prerequisite, or deficiency course concurrently with CS 692."
+
+  utter_chitchat/capstone_exam_outcomes:
+    - text: |
+        Upon successful completion of CS 692 Capstone Exams, students will be able to:
+        - Apply advanced computer science theory to computational problems.
+        - Demonstrate advanced understanding of the mechanisms, components, and architecture of current computing systems.
+        - Apply emerging technologies and advanced algorithmic design.
+        - Critique, plan, and produce complex software applications.
+        - Research and analyze current computer science literature.
+
+  utter_chitchat/capstone_exam_failure:
+    - text: |
+        If a student fails one or more of the exams, they must register for the course in the following semester. The student will only need to attend the exams that were not passed.
+        - Students get a maximum of three attempts at the exams.
+        - Students may not change to a different Capstone Experience (CS 693 Project or CS 699 Thesis) after attempting the exams.
+        - Students who cannot pass the exams after three attempts will not earn their MS degree in Computer Science.
+        - If the student does not pass all 3 tests, a NO CREDIT grade will be issued.   In this case, the student should contact the graduate coordinator about re-taking the exam.  Exams are given in Spring and Fall semesters only.  If a student does not pass an exam, they must register for CS 692 in the following semester and re-take only the exam(s) that they did not pass.  Students are allowed 3 attempts for each exam.  If unfortunately, a student cannot pass after three attempts, they will be dismissed from the program.
+
+  utter_chitchat/capstone_exam_enroll:
+    - text: |
+        To enroll in CS 692 Capstone Exams, you must:
+        - Have completed ALL admissions prerequisites and remediation courses
+        - Have completed all five required courses CS 601, CS 611, CS 621, CS 651, and CS 671
+        - Have a graduate and cumulative CSUEB GPA of 3.0 or better
+        - NOTE: All students taking CS 692 must be registered in the course
+        - If you need to take CS 692 more than once, you will need to pay for the units each time
+        - CS 692 can be taken a maximum of three times
+        - If a student is unable to pass all three parts of the comprehensive exam after three attempts, they will be removed from the program
+        - Students may enroll in CS 692 Capstone exams through MyCSUEB
+        - Be sure to enroll for CR/NC and not A-F grading
+        - Students may register for Capstone Exams in Fall and Spring semesters only
+
+  utter_chitchat/capstone_exam_grading:
+    - text: "The course grade is based solely on the 3 exam scores and results in CREDIT or NO CREDIT for the course.  The student will complete 2 questions on each test, where each question is worth 20 points. The student must pass each test individually, with a score of 24/40 (60%) or better. Students have the right to see the grading of their exams.  If they feel they have been graded unfairly, they should first discuss this with the instructor in charge of the exam.  If consensus is not achieved, the exam may be reviewed by the Department Graduate committee. If the student passes all 3 tests, they will receive a CREDIT (PASS) grade."
+
+  utter_chitchat/capstone_exam_plagiarism:
+    - text: "If an exam paper is found to be plagiarized from other sources, an Academic Dishonesty report will be filed.  The student will lose advisor recommendations."
+
+  utter_chitchat/capstone_csu_5_year_rule:
+    - text: "The CSU system has a 5-year currency rule, which means that if coursework and the Capstone Experience are not completed within 5 years, the currency is lost. This means that the student will need to start over to complete their degree if the coursework or capstone experience exceeds the 5-year timeframe."
+
+  utter_chitchat/capstone_thesis:
+    - text: "A capstone thesis is a unique and original contribution to the field of computer science. It typically includes a literature review around the thesis topic, as well as a software implementation of the thesis proposal. The thesis may also include background research on related projects, a written description of the proposed implementation and testing methodology, and a summary of results. Upon completion, students are required to provide a paper and give an oral defense to their thesis committee. The committee will then vote to pass or fail the thesis based on the defense and the quality of the work."
+
+  utter_chitchat/capstone_thesis_project_prerequisites:
+    - text: "Students wishing to pursue a capstone thesis or project must first complete all prerequisite and/or deficiency courses with a grade of B- or better. Additionally, students must have completed the five required courses for the degree (CS 601, CS 611, CS 621, CS 651, and CS 671) with a 'B' or better average. In addition, the student must have a graduate course GPA and cumulative CSUEB GPA of 3.5 or higher."
+
+  utter_chitchat/capstone_thesis_project_plagiarism:
+    - text: "If a proposal is found to be plagiarized from other sources, the student will lose the privilege of doing a Capstone Project/Thesis. An Academic Dishonesty report will be filed. The student will lose advisor recommendations, TA/grader/scholarship, and internships privileges. The student will need to sign up for the Capstone Exams as a replacement (CS 692)."
+
+  utter_chitchat/capstone_thesis_report_format:
+    - text: "The format for a thesis report can be found on the website of the university's graduate studies department at https://www.csueastbay.edu/graduate-studies/university-thesis.html or in the University Thesis Writing Guide at https://www.csueastbay.edu/aps/files/docs/grad-studies/university-thesis-writing-guide-2018.pdf. Theses can also follow the Department of Computer Science standards for the discipline. Please note that all student theses will be bound by the university and stored in the library as a publication. A department thesis should include at least an introduction, related work, description of the process, findings, results, conclusion, future work, and bibliography. Please use 12 pt font, 1 inch margins, and double-spaced formatting."
+
+  utter_chitchat/capstone_thesis_project_proposal_format:
+    - text: |
+        Although there is no specific template for the proposal, it is recommended for the proposal to have the following sections: introduction, relevant past research, definition of problem and models to be used, tentative timeline, and bibliography. There is no page limit as long as the recommended topics are in the proposal which are finalized with your advisor.
+        - Templates:
+        - Capstone Overview:  https://www.overleaf.com/5262616573qnzkvnmkzrqd
+        - Capstone Proposal Template:  https://www.overleaf.com/read/stygdsrftqvj
+        - Capstone Paper Template:  https://www.overleaf.com/read/dpktdbmdnjpk
+        - Word Version  - Google Drive - https://docs.google.com/document/d/1hFj9F3D-ZkXfZxiKdYZZxLtlZEJEwxDx/edit?usp=sharing&ouid=106722361047203674539&rtpof=true&sd=true
+
+  utter_chitchat/capstone_thesis_project_grading_units:
+    - text: "A minimum of 3 units must be taken for CS 699 Thesis. Grading is A-F."
+
+  utter_chitchat/capstone_thesis_enrollment:
+    - text: "Students who wish to pursue a thesis must first find an advisor from the Computer Science Department faculty. The advisor may be a lecturer if the lecturer has a PhD in Computer Science. The advisor and student will then create a proposal and create a thesis committee. After the proposal is approved by the thesis committee, the advisor and student will submit a special registration petition. Enrollment into the CS 699 Thesis class will be done manually by the Computer Science office administrative staff after proposal approval and submission of the signed Special Registration Petition. The minimum number of units for CS 699 is three (3). For Independent Study courses and Capstone Project or Thesis courses, a Special Registration Petition (SRP) must be used for enrollment."
+
+  utter_chitchat/capstone_thesis_project_SRP:
+    - text: |
+        For Independent Study courses and Capstone Project or Thesis courses, a Special Registration Petition (SRP) must be used for enrollment.  This is now an online form and is available on the Department Forms(https://wapps3.csueastbay.edu/department-forms/index.php) page. The old paper form should not be used anymore, effective immediately.
+        - Students DO NOT HAVE ACCESS to this form so it needs to be filled out by the faculty member supervising the course.
+        - The student will have a chance to review the form and sign it in the Adobesign process.  We know it's weird to have to fill this out for them but this is not our process, it's the Registrar's.
+        - ON THE FORM:
+        - For instructor's email: use your own email
+        - For the Chair's email: leann.christianson@csueastbay.edu for grad students  and varick.erickson@csueastbay.edu for undergrad students
+        - For Dean's email:  Use danika.leduc@csueastbay.edu
+        - For Admin email, use janet.snyder@csueastbay.edu (I will check eligibility/prereqs, then forward to Stephanie for processing)
+        - For Spring, the deadline for us to enroll students is January 31st.  This form needs to be submitted at least a few days before that so it can go through the approvals.
+
+  utter_chitchat/capstone_thesis_next_steps:
+    - text: "After enrollment, students will begin work with their advisor. It is expected that a thesis will take at least a semester and up to a year or more to complete. When work is completed, a final report will be submitted to the Thesis committee prior to the thesis defense. The report should be provided to the committee 2 weeks in advance to the oral defense so that committee members have time to review the document prior to the defense. Thesis defense presentations will be held in Fall and Spring semesters only. All graduate students are invited to the oral defense of a thesis. Students who need more than a semester will earn an RP (Report in Progress) grade until the thesis is defended and completed. They will need to sign up for CS 699 again for 1-3 units depending on work needed for completion. When work is completed, a final grade will be submitted by the advisor."
+
+  utter_chitchat/capstone_thesis_project_rules:
+    - text: "Students should NOT come to advisors with a thesis/project proposal already written. Students and advisors MUST work together on proposals. Advisors are responsible for checking student’s work for accuracy and authenticity."
+
+  utter_chitchat/capstone_thesis_committee:
+    - text: "The thesis committee will be composed of the advisor and two other full time faculty members from CSU East Bay of which two are from the Department of Computer Science. The thesis committee will review and approve or reject the thesis proposal and final report and oral defense."
+
+  utter_chitchat/capstone_project:
+    - text: "A project is a substantial project in an advanced area of Computer Science. It is a software implementation of a particular computer science algorithm or concept. The implementation should be unique in some way. A project includes related work about the research problem or situation, a description of what the project will entail, implementation, testing and validation."
+
+  utter_chitchat/capstone_project_group:
+    - text: "Students are recommended to work as individuals. It is possible to have a group of 2 students working on a project.  In this case, it should be clearly defined in the proposal what work each student will complete."
+
+  utter_chitchat/capstone_project_enroll:
+    - text: |
+        Enrollment into the CS 693 Capstone Project will be done manually by the Computer Science office administrative staff after the proposal is approved and the signed Special Registration Petition has been received.
+        - After enrollment, students will begin work with their advisor. It is expected that a project can be completed in one semester, however, there may be exceptions where work needs to be completed over more than one semester. 
+        - When work is completed, a final report will be submitted to the Graduate committee, and an oral presentation will be given in which other graduate students are invited to attend.
+        - Students may pursue Capstone Projects in Fall and Spring semesters only.
+        - Students who wish to pursue a Capstone Project must first find an advisor from the Computer Science Department. The advisor may be a lecturer if the lecturer has a PhD in Computer Science. 
+        - The advisor and student will then create a proposal which will need approval by the Department of Computer Science Graduate Committee.  After approval, the advisor and student will submit a Special Registration Petition. 
+
+  utter_chitchat/deeplearning_lab:
+    - text: "The Deep Learning Lab at Cal State East Bay, led by Dr. Hongmin Li, is a cutting-edge research group focused on exploring the applications of deep learning in various fields. Dr. Li's lab is renowned for its expertise in developing and implementing state-of-the-art deep learning models for solving real-world problems. With a strong emphasis on interdisciplinary collaboration, the lab brings together researchers from diverse fields, including computer science, artificial intelligence, data science, and machine learning. The lab's research areas span across computer vision, natural language processing, speech recognition, and healthcare applications. Dr. Li's lab is committed to advancing the field of deep learning through innovative research, publications, and collaborations with industry partners."
+
+  utter_chitchat/deeplearning_lab_members:
+    - text: "The Deep Learning Lab at Cal State East Bay, led by Dr. Hongmin Li, comprises a dedicated team of researchers including Dr. Li, as well as three accomplished members - Akash Mhatre, Mary Amon, and Apoorva Tummala."
+
+  utter_chitchat/deeplearning_lab_projects:
+    - text: "The Deep Learning Lab at Cal State East Bay, under the leadership of Dr. Hongmin Li, has been actively involved in research projects related to crisis management, including stance detection in COVID-19 tweets and the development of a chatbot for CSUEB."
+
+  utter_chitchat/deeplearning_lab_sdinc19:
+    - text: "Using dataset, we train several established stance detection models to ascertain a baseline performance for this specific task.To further improve the performance, we employ self-training and domain adaptation approaches to take advantage of large amounts of unlabeled data and existing stance detection datasets."
+
+  utter_chitchat/deeplearning_lab_chatbot:
+    - text: "The university chatbot educates future applicants about your institution, programs, and courses. It explains the admission procedures and provides deadlines for registering applications. The chatbot also can help you promote open days or university events."
+
+  utter_chitchat/deeplearning_lab_website:
+    - text: "Yes, you can view it here - https://deeplearning-lab-csueb.github.io/DL/"
+
+  utter_out_of_scope:
+    - text: "Sorry, I can't handle that request."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
